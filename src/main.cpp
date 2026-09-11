@@ -29,15 +29,10 @@ void setup() {
   OLED.clearDisplay(); 
 // กำหนดสีตัวอักษร
   OLED.setTextColor(WHITE,BLACK);   //Text is white ,background is black
-  OLED.setCursor(0, 0);
   OLED.setTextSize(2); 
-  OLED.println("LBTECH");
-
-
   // ตำแหน่ง
- // OLED.setCursor(5, 0);
- // OLED.print( "temperature" );
-
+  // OLED.setCursor(5, 0);
+  // OLED.print( "temperature" );
   
   // ส่งข้อมูลไป OLED
   OLED.display();
@@ -80,18 +75,23 @@ void loop() {
   Serial.print(hif);
   Serial.println(" *F");
  
- 
+
   OLED.clearDisplay();
+  OLED.setTextColor(WHITE,BLACK);   //Text is white ,background is black
+  OLED.setCursor(20, 0);
+  OLED.setTextSize(1); 
+  OLED.println("DHT11 Sensor");
+
   // กำหนดสีตัวอักษร
   OLED.setTextColor( SSD1306_WHITE );
   // ขนาดตัวอักษร
   OLED.setTextSize(2);
   // ตำแหน่ง
-  OLED.setCursor(5, 0);
+  OLED.setCursor(5, 20);
   OLED.print( "T:" );
   OLED.print(t);
   OLED.print( " *C" );
-  OLED.setCursor(5, 20);
+  OLED.setCursor(5, 45);
   OLED.print( "H:" );
   OLED.print(h);
   OLED.println( " %" );
